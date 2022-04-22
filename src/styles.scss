@@ -1,0 +1,108 @@
+// VARIABLES
+
+@import "variables";
+@import "mixins";
+
+
+// ESTILOS GLOBALES
+
+* {
+  margin: 0rem;
+  padding: 0rem;
+  font-family: $font;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  scroll-behavior: smooth;
+}
+
+* a {
+  color: $light
+}
+
+body {
+  background-color: $dark;
+  overflow-x: hidden;
+}
+
+/* Works on Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: $primary $dark;
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 15px;
+}
+
+*::-webkit-scrollbar-track {
+  background: $dark;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: $primary;
+  border-radius: 20px;
+  border: 3px solid transparent;
+}
+
+.button {
+  --glow-color: rgb(209, 180, 253);
+  --glow-spread-color: rgba(133, 88, 239, 0.781);
+  --enhanced-glow-color: rgb(220, 203, 254);
+  --btn-color: rgb(70, 25, 134);
+  border: 0.25em solid var(--glow-color);
+  padding: 1em 3em;
+  color: var(--glow-color);
+  font-size: 15px;
+  font-weight: bold;
+  background-color: var(--btn-color);
+  border-radius: 1em;
+  outline: none;
+  box-shadow: 0 0 1em 0.25em var(--glow-color),
+    0 0 4em 1em var(--glow-spread-color),
+    inset 0 0 0.75em 0.25em var(--glow-color);
+  text-shadow: 0 0 0.5em var(--glow-color);
+  position: relative;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.button::after {
+  pointer-events: none;
+  content: "";
+  position: absolute;
+  top: 120%;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(--glow-spread-color);
+  filter: blur(2em);
+  opacity: 0.7;
+  transform: perspective(1.5em) rotateX(35deg) scale(1, 0.6);
+}
+
+.button:hover {
+  color: var(--btn-color);
+  background-color: var(--glow-color);
+  box-shadow: 0 0 1em 0.25em var(--glow-color),
+    0 0 4em 2em var(--glow-spread-color),
+    inset 0 0 0.75em 0.25em var(--glow-color);
+}
+
+/* .button:active {
+  box-shadow: 0 0 0.6em 0.25em var(--glow-color),
+    0 0 2.5em 2em var(--glow-spread-color),
+    inset 0 0 0.5em 0.25em var(--glow-color);
+} */
+
+// IMPORTACIONES PARCIALES
+
+@import "components/header/Header.scss";
+@import "components/footer/Footer.scss";
+@import "components/home/Home.scss";
+
+
+// RESPONSIVIDAD
+
+@import "responsive";
