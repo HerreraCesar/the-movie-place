@@ -4,7 +4,7 @@ import React from 'react'
 const Home = () => {
   return (
     <div className='landing'>
-      <section className='cover'>
+      <section id='cover'>
         <div className='shadow'>
           <div className='trailerContainer'>
             <video 
@@ -16,12 +16,17 @@ const Home = () => {
             >
             </video>
           </div>
-          <span className='backgroundTitle'>THE MOVIE PLACE</span>
-          <h1 className='slogan'>Welcome. We are a space dedicated to cinema. Enjoy it!</h1>
-          <button className='button'>Take me there</button>
+          <p className='backgroundTitle'>THE MOVIE PLACE</p>
+          <h1 className='slogan'>Welcome. We are a space dedicated to cinema. Enjoy it! <button className='button coverButton'><a href='#us'>Take me there</a></button></h1>
+          
         </div>
       </section>
-      <Footer/>
+      <section id='us'>
+        <div className='shadow'>
+
+        </div>
+
+      </section>
     </div>
   )
 }

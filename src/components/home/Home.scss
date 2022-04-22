@@ -12,41 +12,55 @@
   overflow: hidden;
 }
 
-.cover {
+#cover {
   width: 100vw;
   height: 100vh;
   display: flex;
 }
 
 .slogan {
-  font-size: 30px;
-  font-weight: 400;
+  font-size: 24px;
+  font-weight: 100;
   color: $light;
-  margin-bottom: 60px;
-  margin-top: 60px;
+  z-index: 2;
+  position: absolute;
+  bottom: 100px;
 }
 
 .trailer {
-  width: auto;
-  height: 320px;
+  width: $width;
+  height: auto;
 }
 
 .trailerContainer {
-  width: 440px;
-  height: 220px;
+  height: 300px;
   overflow: hidden;
   border-radius: $curve;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: absolute;
+  top: 150px;
 }
 
 .backgroundTitle {
   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   -webkit-text-stroke: 2px $primary;
   color: transparent;
-  font-size: 100px;
-  margin-top: -170px;
-  margin-bottom: 60px;
-  text-shadow: 0 0 0.5em $secondary
+  font-size: 140px;
+  text-shadow: 0 0 0.5em $secondary, 0 0 1em $primary;;
+  z-index: 2;
+  text-align: center;
+  position: absolute;
+  margin-bottom: 90px;
+}
+
+.coverButton {
+  margin-left: 20px;
+}
+
+#us {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
 }
