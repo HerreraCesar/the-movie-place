@@ -25,78 +25,27 @@ body {
   overflow-x: hidden;
 }
 
-/* Works on Firefox */
 * {
   scrollbar-width: thin;
   scrollbar-color: $primary $dark;
 }
-
-/* Works on Chrome, Edge, and Safari */
 *::-webkit-scrollbar {
-  width: 15px;
+  width: 10px;
 }
-
 *::-webkit-scrollbar-track {
   background: $dark;
 }
-
 *::-webkit-scrollbar-thumb {
   background-color: $primary;
   border-radius: 20px;
   border: 3px solid transparent;
 }
-/* 
-.button {
-  --glow-color: rgb(169, 140, 209);
-  --glow-spread-color: rgba(133, 88, 239, 0.781);
-  --enhanced-glow-color: rgb(203, 183, 244);
-  --btn-color: rgb(70, 25, 134);
-  border: 0.25em solid var(--glow-color);
-  padding: 1em 3em;
-  color: var(--glow-color);
-  font-size: 15px;
-  font-weight: bold;
-  background-color: var(--btn-color);
-  border-radius: 1em;
-  outline: none;
-  box-shadow: 0 0 1em 0.25em var(--glow-color),
-    0 0 4em 1em var(--glow-spread-color),
-    inset 0 0 0.75em 0.25em var(--glow-color);
-  text-shadow: 0 0 0.5em var(--glow-color);
-  position: relative;
-  transition: all 0.5s;
-  cursor: pointer;
-}
-
-.button::after {
-  pointer-events: none;
-  content: "";
-  position: absolute;
-  top: 120%;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-color: var(--glow-spread-color);
-  filter: blur(2em);
-  opacity: 0.7;
-  transform: perspective(1.5em) rotateX(35deg) scale(1, 0.6);
-  transition: all 0.5s;
-}
-
-.button:hover {
-  color: var(--btn-color);
-  background-color: var(--glow-color);
-  box-shadow: 0 0 1em 0.25em var(--glow-color),
-    0 0 4em 2em var(--glow-spread-color),
-    inset 0 0 0.75em 0.25em var(--glow-color);
-  transition: all 0.5s;
-} */
 
 .button {
   padding-left: 20px;
   padding-right: 20px;
-  padding-bottom: 10px;
-  padding-top: 10px;
+  padding-bottom: 8px;
+  padding-top: 8px;
   border-radius: $curve;
   background: $primary;
   border: none;
@@ -108,20 +57,34 @@ body {
   font-size: 20px;
  }
  
- button:hover {
+ .button:hover {
   box-shadow: 7px 5px 56px -14px $primary;
  }
  
- button:active {
+ .button:active {
   transform: scale(0.95);
   box-shadow: 7px 5px 56px -10px $primary;
  }
 
-// IMPORTACIONES PARCIALES
+// IMPORTACIONES PARCIALES PAGINAS
 
-@import "components/header/Header.scss";
-@import "components/footer/Footer.scss";
-@import "components/home/Home.scss";
+@import "components/pages/account/Account.scss";
+@import "components/pages/contributions/Contributions.scss";
+@import "components/pages/home/Home.scss";
+@import "components/pages/lists/Lists.scss";
+@import "components/pages/not-found/NotFound.scss";
+@import "components/pages/recommender/Recommender.scss";
+@import "components/pages/search/Search.scss";
+
+// IMPORTACIONES PARCIALES SECCIONES
+@import "components/sections/contact/Contact.scss";
+@import "components/sections/cover-page/CoverPage.scss";
+@import "components/sections/details/Details.scss";
+@import "components/sections/footer/Footer.scss";
+@import "components/sections/header/Header.scss";
+@import "components/sections/login/Login.scss";
+@import "components/sections/menu/Menu.scss";
+@import "components/sections/watch/Watch.scss";
 
 
 // RESPONSIVIDAD

@@ -1,0 +1,75 @@
+@import "../../../variables";
+@import "../../../mixins";
+
+.modal {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  background-color: $secondary;
+  transform: translateY(-100vh);
+  transition: all 0.5s ease-in-out;
+  padding: 10vw;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.active {
+  transform: translateY(0vh);
+}
+
+.links {
+    width: 400px;
+  height: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  a {
+    font-size: 40px;
+    font-weight: 100;
+    color: $placeholder;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: $shadow;
+    transition: all 0.5s;
+    position: static;
+  }
+  a:hover {
+    background-color: $primary;
+  }
+  a::before {
+    content: "";
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    display: none;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    top: calc((100vh - 400px) / 2);
+    left: calc(((100vw - $width) / 2) + 400px);
+  }
+  a:nth-child(1)::before {
+    background-image: url("https://github.com/HerreraCesar/movies-website/blob/master/media/backgrounds/background_1.jpg?raw=true");
+  }
+  a:nth-child(2)::before {
+    background-image: url("https://github.com/HerreraCesar/movies-website/blob/master/media/backgrounds/background_10.jpg?raw=true");
+  }
+  a:nth-child(3)::before {
+    background-image: url("https://github.com/HerreraCesar/movies-website/blob/master/media/backgrounds/background_11.jpg?raw=true");
+  }
+  a:nth-child(4)::before {
+    background-image: url("https://github.com/HerreraCesar/movies-website/blob/master/media/backgrounds/background_12.jpg?raw=true");
+  }
+  a:nth-child(5)::before {
+    background-image: url("https://github.com/HerreraCesar/movies-website/blob/master/media/backgrounds/background_13.jpg?raw=true");
+  }
+  a:hover::before {
+    display: block;
+  }
+}
