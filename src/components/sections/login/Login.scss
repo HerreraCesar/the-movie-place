@@ -2,14 +2,81 @@
 @import "../../../mixins";
 
 #login {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
-  
-    h1 {
-        color: $light;
-    }
+  width: $width;
+  height: 100vh;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  border-radius: $curve;
+  width: 500px;
+  height: 460px;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur($blur);
+  margin: 20px;
+  margin-top: 80px;
+  z-index: 5;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+#login .backgroundTitle {
+  margin: auto;
+  margin-top: 60px;
+}
+
+.input {
+  background-color: rgba(255, 255, 255, 0.4);
+  width: 70%;
+  border: none;
+  border-radius: $curve;
+  margin-top: 30px;
+  padding: 10px;
+  font-size: 16px;
+  color: $dark;
+  font-weight: 600;
+  outline: none;
+}
+
+.input::placeholder {
+  color: $placeholder;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.input:focus {
+  background-color: $primary;
+}
+
+
+
+#login .button {
+  margin-top: 30px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.subtitle {
+  font-size: 32px;
+  color: $light;
+  font-weight: 600;
+}
+
+.text {
+  margin-top: 30px;
+  color: $light;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.texts {
+  width: 60%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
 }

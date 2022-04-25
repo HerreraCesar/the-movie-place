@@ -3,7 +3,6 @@
 @import "variables";
 @import "mixins";
 
-
 // ESTILOS GLOBALES
 
 * {
@@ -16,8 +15,8 @@
   scroll-behavior: smooth;
 }
 
-* a {
-  color: $light
+* a, h1, h2, h3 {
+  color: $light;
 }
 
 body {
@@ -55,16 +54,16 @@ body {
   transition: 0.4s;
   color: $light;
   font-size: 20px;
- }
- 
- .button:hover {
+}
+
+.button:hover {
   box-shadow: 7px 5px 56px -14px $primary;
- }
- 
- .button:active {
+}
+
+.button:active {
   transform: scale(0.95);
   box-shadow: 7px 5px 56px -10px $primary;
- }
+}
 
 // IMPORTACIONES PARCIALES PAGINAS
 
@@ -82,10 +81,10 @@ body {
 @import "components/sections/details/Details.scss";
 @import "components/sections/footer/Footer.scss";
 @import "components/sections/header/Header.scss";
+@import "components/sections/loader/Loader.scss";
 @import "components/sections/login/Login.scss";
 @import "components/sections/menu/Menu.scss";
 @import "components/sections/watch/Watch.scss";
-
 
 // RESPONSIVIDAD
 

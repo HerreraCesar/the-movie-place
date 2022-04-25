@@ -1,11 +1,11 @@
-import React from 'react'
+import React from "react";
 
 const Watch = () => {
   return (
-    <section id='watch'>
+    <section id="watch">
       <h1>WATCH</h1>
     </section>
-  )
-}
+  );
+};
 
-export default Watch
+export default Watch;

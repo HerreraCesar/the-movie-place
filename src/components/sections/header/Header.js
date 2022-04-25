@@ -7,8 +7,8 @@ import Menu from "../menu/Menu";
 const Header = () => {
   const [open, setOpen] = useState(false);
   const handleMenu = () => {
-    setOpen(!open)
-  }
+    setOpen(!open);
+  };
 
   return (
     <div className="header">

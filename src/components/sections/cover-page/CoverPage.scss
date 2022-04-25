@@ -28,7 +28,7 @@
 
 .backgroundTitle {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  -webkit-text-stroke: 2px $primary;
+  -webkit-text-stroke: 3px $primary;
   color: transparent;
   font-size: 140px;
   text-shadow: 0 0 0.5em $secondary, 0 0 1em $primary;
@@ -55,8 +55,8 @@
   flex-flow: row nowrap;
   align-items: center;
   .button {
-      margin-right: 20px;
-      margin-left: 20px;
+    margin-right: 20px;
+    margin-left: 20px;
   }
 }
 
@@ -67,16 +67,16 @@
 }
 
 .initials {
-    text-align: end;
+  text-align: end;
 }
 .initials::after {
-    
-    color: $light;
-    font-size: 30px;
-    padding: 2px;
-    content: "TMP";
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: $light;
+  font-size: 30px;
+  padding: 2px;
+  content: "TMP";
 }
 .initials:hover::after {
-    text-shadow: 1px 1px 20px $primary, 1px 1px 5px $secondary;
-    content: "The Movie Place";
+  text-shadow: 1px 1px 20px $primary, 1px 1px 5px $secondary;
+  content: "The Movie Place";
 }

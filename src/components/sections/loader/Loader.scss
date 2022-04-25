@@ -1,0 +1,92 @@
+@import "../../../variables";
+@import "../../../mixins";
+
+.wheel {
+  --clr: $secondary;
+  width: 50px;
+  height: 50px;
+  position: relative;
+}
+
+.wheel:before,
+.wheel:after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  border: 10px solid transparent;
+  border-top-color: var(--clr);
+}
+
+.wheel:before {
+  z-index: 100;
+  animation: spin 1s infinite;
+}
+
+.wheel:after {
+  border: 10px solid #ccc;
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.loader {
+  background-color: transparent;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  backdrop-filter: blur(50px);
+}
+
+.pop {
+    width: 200px;
+    height: 200px;
+    animation: jump 1s infinite;
+    object-fit: fill;
+    position: fixed;
+    bottom: 0;
+    justify-content: baseline;
+}
+
+@keyframes jump {
+    0% {
+        transform: translateY(0px);
+        height: 200px;
+    }
+    50% {
+        transform: translateY(-80px);
+    }
+    70% {
+        height: 200px;
+    }
+    80% {
+        transform: translateY(0px);
+        
+    }
+    90% {
+        height: 170px;
+    }
+    100% {
+        height: 200px;
+    }
+}
