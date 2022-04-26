@@ -6,7 +6,8 @@ const Loader = () => {
       <div class="wheel">
       </div>
       <div >
-        <img className="pop" src="https://raw.githubusercontent.com/HerreraCesar/the-movie-place/main/src/assets/popcorn.svg" alt="" />
+        <img className="pop" src="https://raw.githubusercontent.com/HerreraCesar/the-movie-place/main/src/assets/loader.svg" alt="" />
+        
       </div>
     </div>
   );
